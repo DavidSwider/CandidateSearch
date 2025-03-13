@@ -20,7 +20,7 @@ const CandidateCard = ({
       {currentCandidate?.Title ? (
         <section className='candidateCard'>
           <figure>
-            <img src={`${currentCandidate.Poster}`} alt={`${currentCandidate.Title}`} />
+           
           </figure>
           <article className='details'>
             <h2>{currentCandidate.Title}</h2>
