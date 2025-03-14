@@ -6,13 +6,13 @@ import  Candidate from '../interfaces/Candidate.interface';
 
 type CandidateCardProps = {
   currentCandidate: Candidate;
- 
+  removeCandidate?: (login: string) => void;
   //selectCandidate(isSelected: boolean) : void;
  
 };
 
 const CandidateCard = ({
-  currentCandidate,
+  currentCandidate,removeCandidate
   //selectCandidate,
 }: CandidateCardProps) => {
   return (
@@ -25,23 +25,27 @@ const CandidateCard = ({
           <article className='details'>
             <img src= {currentCandidate.avatar_url}></img>
             <p>
-              <strong>Directed By:</strong> {currentCandidate.name}
+              <strong>Name:</strong> {currentCandidate.name}
             </p>
             <p>
-              <strong>Starring:</strong> {currentCandidate.login}
+              <strong>Login:</strong> {currentCandidate.login}
             </p>
             <p>
-              <strong>Released:</strong> {currentCandidate.email}
+              <strong>Email:</strong> {currentCandidate.email}
             </p>
             <p>
-              <strong>Genre:</strong> {currentCandidate.html_url}
+              <strong>Html-url:</strong> {currentCandidate.html_url}
             </p>
+            <p>
+              <strong>Company:</strong> {currentCandidate.company}
+            </p>
+            {removeCandidate && (
+        <button onClick={() => currentCandidate.login && removeCandidate(currentCandidate.login)} className="icon-button reject-button">
+          <i className="fas fa-minus"></i> Reject
+        </button>
+      )}
           </article>
-          <article className='plot'>
-            <p>
-              <strong>Plot:</strong> {currentCandidate.company}
-            </p>
-          </article>
+          
           {/* {onWatchList || onSeenItList ? (
             <aside className='icons'>
               <ImCross

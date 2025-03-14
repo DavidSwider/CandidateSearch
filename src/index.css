@@ -118,3 +118,55 @@ tbody tr:nth-child(odd) {
   width: 80vw;
   table-layout: fixed;
 }
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.icon-button .fas {
+  color: #0eaf31; /* Change this color to match your design */
+}
+
+.icon-button:hover .fas {
+  color: #0056b3; /* Change this color to match your design */
+}
+
+.save-button .fas {
+  color: #0eaf31; /* Green color for save button */
+  background-color: #1b1a1a;
+  border: 1px solid #0eaf31;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+}
+
+.save-button:hover .fas {
+  color: #0c8b28; /* Darker green on hover */
+}
+
+.skip-button .fas {
+  color: #e74c3c; /* Red color for skip button */
+  background-color: #1b1a1a;
+  border: 1px solid #e74c3c;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+}
+
+.skip-button:hover .fas {
+  color: #c0392b; /* Darker red on hover */
+}
+
+.reject-button .fas {
+  color: #e74c3c; /* Red color for reject button */
+  background-color: #1b1a1a;
+  border: 1px solid #e74c3c;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+}
+
+.reject-button:hover .fas {
+  color: #c0392b; /* Darker red on hover */
+}
