@@ -1,48 +1,48 @@
-import type React from 'react';
-import type {Candidate} from '../interfaces/Candidate.interface';
-import { IoEyeOutline } from 'react-icons/io5';
-import { ImCross } from 'react-icons/im';
-import { CgPlayListAdd } from 'react-icons/cg';
+//import type React from 'react';
+import  Candidate from '../interfaces/Candidate.interface';
+// import { IoEyeOutline } from 'react-icons/io5';
+// import { ImCross } from 'react-icons/im';
+// import { CgPlayListAdd } from 'react-icons/cg';
 
 type CandidateCardProps = {
   currentCandidate: Candidate;
  
-  selectCandidate(isSelected: boolean) : void;
+  //selectCandidate(isSelected: boolean) : void;
  
 };
 
 const CandidateCard = ({
   currentCandidate,
-  selectCandidate,
+  //selectCandidate,
 }: CandidateCardProps) => {
   return (
     <>
-      {currentCandidate?.Title ? (
+      {currentCandidate?.avatar_url && (
         <section className='candidateCard'>
           <figure>
            
           </figure>
           <article className='details'>
-            <h2>{currentCandidate.Title}</h2>
+            <img src= {currentCandidate.avatar_url}></img>
             <p>
-              <strong>Directed By:</strong> {currentCandidate.Director}
+              <strong>Directed By:</strong> {currentCandidate.name}
             </p>
             <p>
-              <strong>Starring:</strong> {currentCandidate.Actors}
+              <strong>Starring:</strong> {currentCandidate.login}
             </p>
             <p>
-              <strong>Released:</strong> {currentCandidate.Released}
+              <strong>Released:</strong> {currentCandidate.email}
             </p>
             <p>
-              <strong>Genre:</strong> {currentCandidate.Genre}
+              <strong>Genre:</strong> {currentCandidate.html_url}
             </p>
           </article>
           <article className='plot'>
             <p>
-              <strong>Plot:</strong> {currentCandidate.Plot}
+              <strong>Plot:</strong> {currentCandidate.company}
             </p>
           </article>
-          {onWatchList || onSeenItList ? (
+          {/* {onWatchList || onSeenItList ? (
             <aside className='icons'>
               <ImCross
                 style={{ fontSize: '40px', cursor: 'pointer' }}
@@ -69,9 +69,10 @@ const CandidateCard = ({
             </aside>
           )}
         </section>
-      ) : (
-        <h1 style={{ margin: '16px 0' }}>Please search for a candidate.</h1>
-      )}
+      ) : ( */}
+        {/* <h1 style={{ margin: '16px 0' }}>Please search for a candidate.</h1> */}
+            </section>
+        )}
     </>
   );
 };
