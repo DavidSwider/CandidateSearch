@@ -8,5 +8,6 @@ export default defineConfig({
    server: {
     host: '0.0.0.0', // Bind to 0.0.0.0 to allow external access
     port: process.env.PORT ? parseInt(process.env.PORT) : 3000, // Use PORT environment variable if set, otherwise default to 3000
+     allowedHosts: ['candidatesearch-ndbo.onrender.com'], // Add your Render host here
   },
 });
