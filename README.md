@@ -60,12 +60,12 @@ Refresh the page to see that saved candidates persist.
 
 Deployment
 The application is deployed at:
-🔗 Live Application
+🔗 Live Application:https://candidatesearch-ndbo.onrender.com
 
 Contact
 📧 Email: Davidswider6@gmail.com
 🔗 GitHubRepo: https://github.com/DavidSwider/CandidateSearch
-
+🔗 Live Application:https://candidatesearch-ndbo.onrender.com
 
 
 
